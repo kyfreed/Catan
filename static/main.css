@@ -1,0 +1,281 @@
+body{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+#username-container{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#player-colour-container{
+  margin: 15px;
+  display: inline-block;
+}
+
+.hex {
+  float: left;
+  margin-left: 4px;
+  margin-bottom: -26px;
+  position: relative;
+}
+.hex .top {
+  width: 0;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+.hex .middle {
+  width: 104px;
+  height: 60px;
+}
+.hex .bottom {
+  width: 0;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+.hex-row {
+  clear: left;
+}
+.hex-row.one {
+  margin-left: 108px;
+}
+.hex-row.two {
+  margin-left: 54px;
+}
+#board {
+  margin: 0;
+  position: relative;
+  top: 80px;
+  left:80px;
+  width: 800px;
+  height: 800px;
+  background-color: #40E0D0;
+}
+
+#container{
+  margin:auto;
+  width: 1000px;
+  height: 960px;
+}
+
+.prob{
+  position: relative;
+  left: 22px;
+  bottom: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.75);
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.robber{
+  position: relative;
+  left: 32px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #444;
+}
+
+.location.empty{
+  height:16px;
+  width:16px;
+  margin-top: -13px;
+  margin-left: -13px;
+  border: 5px solid #00f;
+  border-radius:80px;
+  z-index : 10;
+}
+
+.location{
+  position: absolute;
+}
+
+#hex-container{
+  position: absolute;
+  left: 120px;
+  top: 150px;
+}
+
+#settlements{
+  display: inline-block;
+}
+
+#roads{
+  display: inline-block;
+  margin-right: 90px;
+  margin-left: 15px;
+}
+
+#settlement-image{
+  display: inline-block;
+  width: 0;
+	height: 0;
+	
+	border-right: 30px solid  transparent; 
+	border-left: 30px solid  transparent; 
+
+	border-bottom: 51.9615242px solid #000;
+  z-index : 11;
+}
+
+#road-image{
+  display: inline-block;
+  width: 4px;
+  height: 60px;
+  background: #000;
+}
+
+#settlement-num{
+  position: relative;
+  display: inline-block;
+  bottom: 18px;
+  left: 8px;
+  font-size: 28px;
+  font-family: sans-serif;
+}
+
+#road-num{
+  position: relative;
+  display: inline-block;
+  bottom: 18px;
+  left: 8px;
+  font-size: 28px;
+  font-family: sans-serif;
+}
+
+.vertex-nw {
+  top: 29px;
+  left: 1px;
+}
+.vertex-n {
+  top: -2px;
+  left: 50%;
+}
+.vertex-ne {
+  top: 29px;
+  left: calc(100% + 2px);
+}
+.vertex-se {
+  top: calc(100% - 28px);
+  left: calc(100% + 2px);
+}
+.vertex-s {
+  top: calc(100% + 1px);
+  left: 50%;
+}
+.vertex-sw {
+  top: calc(100% - 28px);
+  left: 1px;
+}
+.hex:last-child .vertex-se {
+  top: calc(100% - 30px);
+  left: calc(100% - 0px);
+}
+
+.hex:last-child .vertex-ne {
+  left: calc(100% - 0px);
+}
+
+.hex-row:first-child .vertex-n{
+  top: 1px;
+}
+
+.hex-row:last-child .vertex-s{
+  top: calc(100% - 2px);
+}
+
+.hex-row:nth-child(3) .hex:first-child .vertex-s, .hex-row:nth-child(4) .hex:first-child .vertex-s{
+  top: calc(100% - 0px);
+  left: calc(50% + 1px);
+}
+
+.hex-row:nth-child(3) .hex:last-child .vertex-s, .hex-row:nth-child(4) .hex:last-child .vertex-s{
+  top: calc(100% - 0px);
+  left: calc(50% - 1px);
+}
+
+.edge-nw{
+  top: 14px;
+  left: 25%;
+}
+
+.edge-ne{
+  top: 13px;
+  left: calc(75% + 1px);
+}
+
+.edge-e{
+  top: 50%;
+  left: calc(100% + 2px);
+}
+
+.edge-se{
+  top: calc(100% - 14px);
+  left: calc(75% + 1px);
+}
+
+.edge-sw{
+  top: calc(100% - 13px);
+  left: calc(25% - 1px);
+}
+
+.edge-w{
+  top: 50%;
+  left: -2px;
+}
+
+.settlement{
+  width: 0;
+	height: 0;
+	border-right: 15px solid transparent; 
+	border-left: 15px solid transparent;
+  border-bottom: 26px solid;
+  margin-top: -16px;
+  margin-left: -15px;
+  z-index: 10;
+}
+
+.road{
+  width: 6px;
+  height: 60px;
+  margin-top: -30px;
+  z-index: 0;
+}
+
+.edge-e.road{
+  margin-left: -2px;
+}
+
+.edge-nw.road{
+  transform: rotate(60deg);
+  margin-left: -2px;
+  margin-top: -28px;
+}
+
+.edge-se.road{
+  transform: rotate(60deg);
+  margin-left: -2px;
+  margin-top: -29px;
+}
+
+.edge-ne.road{
+  transform: rotate(120deg);
+  margin-left: -3px;
+  margin-top: -27px;
+}
+
+.edge-sw.road{
+  transform: rotate(120deg);
+  margin-left: -3px;
+  margin-top: -31px;
+}
+
+.hex-row:first-child .edge-ne.road, .hex:last-child .edge-ne.road{
+  margin-top: -28px;
+}

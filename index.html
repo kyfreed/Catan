@@ -1,0 +1,196 @@
+<link rel="stylesheet" href="static/main.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<body>
+  <div id="container">
+    <div id="board">
+      <div id="hex-container">
+        <div class="hex-row one">
+          <div class="hex" id="hex-0">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-1">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-2">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+        <div class="hex-row two">
+          <div class="hex" id="hex-3">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-4">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-5">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-6">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex" id="hex-7">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-8">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-9">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-10">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-11">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+        <div class="hex-row two">
+          <div class="hex" id="hex-12">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-13">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-14">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-15">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+        <div class="hex-row one">
+          <div class="hex" id="hex-16">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-17">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="hex" id="hex-18">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="prob">
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="username-container">
+    Username:&nbsp;<input type=text id="username"></input>
+  </div>
+  <div id="player-colour-container">
+    Player colour:&nbsp;<input type=text id="player-colour"></input>
+  </div>
+  <div id="hud">
+    <span id="roads">
+      <div id="road-image"></div>
+      <p id="road-num">15</p>
+    </span>
+    <span id="settlements">
+      <div id="settlement-image"></div>
+      <p id="settlement-num">5</p>
+    </span>
+  </div>
+</body>
+
+<script src="static/game.js"></script>
